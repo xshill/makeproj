@@ -15,8 +15,7 @@ if __name__ == "__main__":
 
     try:
         directory = os.path.abspath(args.directory[0])
-        dirname = os.path.dirname(directory + "/")
-
+        dirname = os.path.basename(os.path.dirname(directory + "/"))
         os.mkdir(directory)
         if args.verbose: print("Directory " + directory + " created")
         os.mkdir(directory + "/include")
